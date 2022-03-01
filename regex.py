@@ -76,7 +76,43 @@ print(text_match("aab_cbbbc"))
 print(text_match("aab_Abbbc"))
 print(text_match("Aaab_abbbc"))
 
+# 7. Function that find the sequences of one upper case letter followed by lower case letters
+def text_match(text):
+    patterns = '^([A-Z][a-z]+)$'
+    if re.search(patterns,  text):
+        return 'Found a match!'
+    else:
+        return('Not matched!')
+print(text_match("AaBbGg"))
+print(text_match("Python"))
+print(text_match("python"))
+print(text_match("PYTHON"))
+print(text_match("aA"))
+print(text_match("Aa"))
 
+# 8. Function that matches a string that has an a followed by anything,ending in b.
+def text_match(text):
+    patterns = '^a.b$'
+    if re.search(patterns,  text):
+        return 'Found a match!'
+    else:
+        return('Not matched!')
+print(text_match("acabbd"))
+print(text_match("abc"))
+print(text_match("a"))
+print(text_match("ab"))
+print(text_match("abb"))
+
+# 9. Function that matches a word at the end of string, with optional punctuation
+def text_match(text):
+    patterns = '^.*[.,]$' 
+    if re.search(patterns,  text):
+        return 'Found a match!'
+    else:
+        return('Not matched!')
+print(text_match("The quick brown fox jumps over the lazy dog."))
+print(text_match("The quick brown fox jumps over the lazy dog. "))
+print(text_match("The quick brown fox jumps over the lazy dog "))
 
 
 
