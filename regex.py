@@ -105,7 +105,7 @@ print(text_match("abb"))
 
 # 9. Function that matches a word at the end of string, with optional punctuation
 def text_match(text):
-    patterns = '^.*[.,]$' 
+    patterns = '^.*[.,]$' # .* means any character 0 or more times  
     if re.search(patterns,  text):
         return 'Found a match!'
     else:
@@ -114,7 +114,27 @@ print(text_match("The quick brown fox jumps over the lazy dog."))
 print(text_match("The quick brown fox jumps over the lazy dog. "))
 print(text_match("The quick brown fox jumps over the lazy dog "))
 
+#10. Function that matches a word at the beginning of a string
+def text_match(text):
+        patterns = '^\w+'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
 
+print(text_match("The quick brown fox jumps over the lazy dog."))
+print(text_match(" The quick brown fox jumps over the lazy dog."))
+
+# 11. Function that matches a word at the end of a string, with optional punctuation
+def text_match(text):
+    patterns = '^.*[.,]$' # .* means any character 0 or more times  
+    if re.search(patterns,  text):
+        return 'Found a match!'
+    else:
+        return('Not matched!')
+print(text_match("The quick brown fox jumps over the lazy dog."))
+print(text_match("The quick brown fox jumps over the lazy dog. "))
+print(text_match("The quick brown fox jumps over the lazy dog "))
 
 
 
